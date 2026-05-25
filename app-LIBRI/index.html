@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web app libri - firebase: firestore</title>
+    <link rel="styleSheet" href="style.css">
+</head>
+
+<body>
+    <h1>Web app libri - firebase: firestore</h1>
+
+    <div class="content">
+
+        <for id="add-book-form">
+
+            <input type="text" name="titulo" placeholder="Digite o titulo do livro aqui">
+            <input type="text" name="author" placeholder="Digite o nome do autor aqui">
+
+            <button>CADASTRAR</button>
+
+        </for>
+        <ul id="book-list"></ul>
+
+    </div>
+
+
+</body>
+
+<!-- IMPORT DO SDK DO FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+<!-- IMPORT DO SDK DO FIRESTORE  -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+<!-- CONEXÃO JAVASCRIPT COM O FIREBASE -->
+<script>
+
+    //CREDENCIAS DE ACESSO PARA O FIREBASE
+    const firebaseConfig = {
+        apiKey: "AIzaSyDt0_1C9EgeUfyauuwLb-mm_C_BfCBcTiw",
+        authDomain: "app-aula-bdiii.firebaseapp.com",
+        projectId: "app-aula-bdiii",
+        storageBucket: "app-aula-bdiii.firebasestorage.app",
+        messagingSenderId: "6441839259",
+        appId: "1:6441839259:web:fde9edbff8d5610f26743e"
+    };
+
+    // INICIALIZA A CONEXÃO COM O FIREBASE E A APLICAÇÃO WEB:
+    firebase.initializeApp(firebaseConfig);
+    
+    //INICIALIZA A CONEXÃO COM O BANCO DE DADOS FIRESTORE:
+    console.log("TESTE DE CONEXÃO:");
+    const db = firebase.firestore();
+    
+    
+
+    console.log(db);
+
+</script>
+
+    <script src="app.js"></script>
+
+</html>
